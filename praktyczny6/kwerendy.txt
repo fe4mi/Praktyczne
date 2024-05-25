@@ -1,0 +1,1 @@
+INSERT INTO ratownicy(nrKaretki, ratownik1, ratownik2, ratownik3) VALUES (20, 'Adam Nowak','Jan Kowalski','Anna Nowakowska');
