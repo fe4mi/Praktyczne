@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabryka cukierków</title>
+    <link rel="stylesheet" href="styl10.css">
+</head>
+<body>
+    <aside>
+        <a href="./zamowienie.html"> <img src="./cukierki1.jpg" alt=""></a>
+    </aside>
+    <nav>
+        <a href="./index.html" id="logo"><img src="./cukierki2.png" alt="Nasze logo" ></a>
+    </nav>
+    <header>
+        <h1>Strefa zamówień</h1>
+    </header>
+  
+        <div class="lewy">
+            <label for="ksztalt">Numer kształtu: </label><br>
+            <input type="number" name="ksztalt" id="ksztalt">
+            <label for="kolor">skomponuj swój kolor, podaj RGB:</label><br>
+            <label for="rkolor">R:</label>
+            <input type="number" name="rkolor" id="rkolor">
+
+            <label for="gkolor">G:</label>
+            <input type="number" name="gkolor" id="gkolor">
+<br>
+            <label for="bkolor">B:</label>
+            <input type="number" name="bkolor" id="bkolor">
+            
+            <button onclick="zamow()">Zamówienie</button>
+            <p id="wynik">Twoje zamowienie</p><br>
+            <button id="kolor" onclick="zmienkolor()">Kolor</button>
+
+        </div>
+
+        <div class="prawy">
+            <h2>Nasza oferta</h2>
+            <table>
+                <tr>
+                    <th>Kształty</th>
+                    <th rowspan="2">Możesz zamówić <br> dowolny kolor
+                        cukierka</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ol>
+                            <li>cytryna</li>
+                            <li>liść</li>
+                            <li>banan</li>
+                        </ol>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    <footer>
+        <p>Autor strony: xxxxxxxxxxxxx</p>
+    </footer>
+    <script>
+        function zamow(){
+            var ksztalt = parseInt(document.getElementById('ksztalt').value);
+         
+
+            var zmienna;
+
+            switch(ksztalt){
+                case 1:
+                    zmienna = "cytryna";
+                    break;
+                case 2:
+                zmienna="liść";
+                    break;
+                case 3:
+                zmienna="banan";
+                    break;
+                case 4:
+                zmienna="inny";
+                    break;
+            }
+            
+
+            document.getElementById("wynik").innerHTML = "Twoje zamówienie to " + zmienna;
+
+
+            
+        }
+        function zmienkolor(){
+
+            var kolorr = parseInt(document.getElementById('rkolor').value);
+            var kolorg = parseInt(document.getElementById('gkolor').value);
+            var kolorb = parseInt(document.getElementById('bkolor').value);
+            console.log(ksztalt, kolorb,kolorg,kolorr);
+           document.getElementById("kolor").style.backgroundColor = 'rgb('+kolorr+','+ kolorg+','+kolorb+')';
+        }
+
+
+    </script>
+    <?php
+    for($i = 1; $i <=7; $i+=3){
+        print($i);
+    }
+    ?>
+</body>
+</html>
