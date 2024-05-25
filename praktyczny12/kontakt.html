@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komputery</title>
+    <link rel="stylesheet" href="styl.css">
+    <link rel="shortcut icon" type="image/ico" href="logo.png">
+</head>
+<body>
+    <section class="container">
+            <header>
+                <img src="./baner1.png" alt="Pogotowie komputerowe" width="1000px" height="200px">
+            </header>
+            <nav>
+                <a href="index.html">Strona Główna</a>
+                <a href="kontakt.html">Kontakt</a>
+            </nav>
+            <main>
+                <section class="glowny1">
+
+                </section>
+                <section class="glowny2">
+                    <h2>
+                        Kontakt
+                    </h2>
+                   
+                    <table>
+                        <tr>
+                            <td>
+                               Imię
+                            </td>
+                            <td>
+                                <input type="text" name="imie" id="imie">
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                Nazwisko
+                            </td>
+                            <td>
+                                <input type="text" name="nazwisko" id="nazwisko">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                               E-mail
+                            </td>
+                            <td>
+                                <input type="email" name="email" id="email">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Zgłoszenie
+                            </td>
+                            <td>
+                                <select name="COS" id="">
+                                    <option value="naprawa komputerów" id="naprawa" name="COS">naprawa komputerów</option>
+                                    <option value="odzyskiwanie danych" id="odzyskiwanie" name="COS">odzyskiwanie danych</option>
+                                    <option value="wirusy" id="wirusy" name="COS">wirusy</option>
+                                    <option value="konfiguracja LAN" id="lan" name="COS">konfiguracja LAN</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="checkbox" name="" id="" checked>Wyślij kopię wiadomości</td>
+                        </tr>
+                        <tr>
+                            <td id="cos"><input type="reset" value="Czyść" id="reset"></td>
+                            <td id="cos">
+                                
+                                <button onclick="skrypt()">Wyślij</button></td>
+                            
+                        </tr>
+                    </table>
+              
+                    <hr>
+                    <p id="wynik"></p>
+                </section class="glowny3">
+                <section>
+                    
+                </section>
+            </main>
+            <footer>
+<p>Autor: <i>1111111111111</i></p>
+            </footer>
+
+    </section>
+
+    <script>
+        function skrypt() {
+            var  imie = document.getElementById("imie").value;
+            var  nazwisko = document.getElementById("nazwisko").value;
+            var  email = document.getElementById("email").value.toLowerCase();
+            
+            
+
+            var usluga=
+            "";
+
+            if(naprawa.checked){
+                usluga="naprawa komputerów";
+            }else if(odzyskiwanie.checked)
+            {
+                usluga="odzyskiwanie danych";
+            }
+            else if(wirusy.checked)
+            {
+                usluga="wirusy";
+            }else if(lan.checked){
+                usluga="konfiguracja LAN";
+            }
+
+            document.getElementById("wynik").innerHTML= imie +" "+ nazwisko +"<br />"+email+"<br />"+"Usługa: "+usluga;
+        }
+    </script>
+
+
+</body>
+</html>
