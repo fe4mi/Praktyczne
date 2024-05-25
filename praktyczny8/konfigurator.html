@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style w JavaScript</title>
+    <link rel="stylesheet" href="styl6.css">
+</head>
+<body>
+    <header>
+        <h1>Konfigurator stylu</h1>
+        <p>
+        Podaj kolor tła <br />
+        <button id="indigo" value="Indigo" class="tlo" onclick="indigo()">Indigo</button>
+        <button id="steelblue" value="SteelBlue" class="tlo" onclick="steelblue()">SteelBlue</button>
+        <button id="olive" value="Olive" class="tlo" onclick="olive()">Olive</button>
+        </p>
+        <p>Podaj kolor czcionki <br />
+        
+        <select id="selecty" onclick="funkcja1()">
+            <option value="White" >White</option>
+            <option value="Tan">Tan</option>
+            <option value="Bisque">Bisque</option>
+            <option value="Plum">Plum</option>
+        </select>
+        </p>
+
+        <p>
+            Podaj rozmiar czcionki w procentach, np. 200% <br />
+            <input type="text" name="procent" id="procent" placeholder="100%" onclick="procent()">
+        </p>
+
+
+        <p>Czy rysunek ma mieć ramkę? <br />
+            <label for="check">Rysuj ramkę</label>
+        <input type="checkbox" name="check" id="check" onchange="check()">
+        </p>
+        <p>
+            Jaki jest typ punktora listy? <br />
+            dysk
+            <input type="radio" value="dysk" id="x"  name="o" onclick="radio()">
+            <br /> kwadrat
+
+            <input type="radio" value="kwadrat" id="y"  name="o" onclick="radio()">
+            <br />okrąg
+
+            <input type="radio" value="okrag" id="z"  name="o" onclick="radio()">
+        </p>
+    </header>
+    <aside>
+        <img src="./gibraltar.jpg" alt="półwysep Gibraltar">
+        <ol>
+            <li>element 1</li>
+            <li>element 2</li>
+            <li>element 3</li>
+        </ol>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+    </aside>
+    <footer>
+        Autor: chujjebany
+    </footer>
+
+
+
+    <script>
+       
+        
+function indigo(){
+    document.querySelector("aside").style.backgroundColor="indigo";
+}
+function steelblue(){
+    document.querySelector("aside").style.backgroundColor="steelblue";
+}
+function olive(){
+    document.querySelector("aside").style.backgroundColor="olive";
+    console.log(select);
+}
+
+
+function funkcja1(){
+                var asd = document.getElementById('selecty').options[document.getElementById('selecty').selectedIndex].value;
+        
+        document.querySelector("aside").style.color=asd;}
+
+
+
+
+        function procent(){
+            var x = document.getElementById("procent").value;
+
+            document.querySelector("aside").style.fontSize = x;
+        }
+
+        function check(){
+            var x = document.getElementById("check");
+            if(x.checked){
+                document.querySelector("img").style.border = "solid 1px white";
+            }
+            else{
+                document.querySelector("img").style.border = "none";
+            }
+        }
+        function radio(){
+            var x = document.getElementById("x");
+            
+            if(x.checked){
+                document.querySelector("ol").style.listStyleType="disc";
+            }
+            var y = document.getElementById("y");
+            if(y.checked){
+                document.querySelector("ol").style.listStyleType="square";
+            }
+            var z = document.getElementById("z");
+            if(z.checked){
+                document.querySelector("ol").style.listStyleType="circle";
+            }
+            
+        }
+
+    </script>
+
+
+
+
+
+</body>
+</html>
