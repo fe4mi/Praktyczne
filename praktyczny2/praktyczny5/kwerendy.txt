@@ -1,0 +1,5 @@
+SELECT * from pogoda where miasta_id =1 order by data_prognozy asc;
+
+SELECT id, data_prognozy FROM `pogoda` WHERE opady > 30;
+
+SELECT pogoda.data_prognozy ,pogoda.temperatura_noc, miasta.nazwa FROM pogoda inner join miasta on pogoda.miasta_id = miasta.id WHERE temperatura_noc < 6;
