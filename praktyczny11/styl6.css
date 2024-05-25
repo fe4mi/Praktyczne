@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header{
+    background-color: #6F79A8;
+    color: white;
+    height: 140px;
+    display: flex;
+}
+.lewy{
+    width: 30%;
+
+}
+.prawy{
+    width: 70%;
+}
+.kal{
+    background-color: #9FA8DA;
+    width: 160px;
+    height: 85px;
+    margin: 5px;
+    border: 1px #6F79A8 solid;
+    text-wrap: nowrap;
+    overflow: hidden;
+    float: left;
+    justify-content:end ;
+    text-overflow: hidden;
+   
+    
+    
+
+}
+.kal:hover{
+    background-color: #6F79A8;
+    color: white;
+}
+footer{
+    background-color: #6F79A8;
+    color: white;
+    padding: 5px;
+    text-align: right;
+    clear: both;
+}
+h6{
+    text-align: center;
+    
+}

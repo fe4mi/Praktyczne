@@ -1,0 +1,4 @@
+SELECT DISTINCT wpis from zadania where wpis !="" AND ID<=7 AND ID>=1;
+SELECT dataZadania, wpis from zadania where dataZadania like "%07%";
+SELECT miesiac, wpis from zadania where wpis like "S%";
+UPDATE `zadania` SET wpis = "Wycieczka nad morze" where dataZadania ="2020-07-18";
