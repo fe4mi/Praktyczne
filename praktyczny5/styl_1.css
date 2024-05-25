@@ -1,0 +1,39 @@
+*{
+    background-color: #F6E5DC;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header{
+    background-color: #2F180C;
+    text-align: center;
+    color:  khaki;
+    height: 60px;
+}
+
+article{
+    font-size: 150%;
+    padding: 70px;
+}
+aside{
+    background-color: #D0B6A8;
+    text-align: center;
+    padding: 30px;
+
+}
+footer{
+    background-color: #2F180C;
+    color: khaki;
+    height: 60px;
+}
+
+#button{
+    margin: 10px;
+    padding: 5px;
+    background-color: #2F180C;
+    color: khaki;
+}
+.cos{
+    width: 60%;
+    height: 350px;
+    background-color: aqua;
+    float: left;
+}
