@@ -1,0 +1,4 @@
+SELECT nazwa, cena from uslugi where cena >= 50;
+SELECT AVG(cena), COUNT(uslugi.id) FROM uslugi WHERE uslugi.rodzaj = 1 GROUP BY uslugi.rodzaj;
+create user 'kosmetyczka'@'localhost' identified by 'Kosmet34';
+grant select, update on uslugi to 'kosmetyczka'@'localhost';

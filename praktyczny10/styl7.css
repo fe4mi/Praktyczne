@@ -1,0 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+aside{
+    background-color: #E1BEE7;
+    width: 25%;
+    float: left;
+}
+.goraa{
+    height: 400px;
+}
+.dola{
+    height: 330px;
+}
+nav{
+    width: 75%;
+    font-size: 170%;
+    text-align: center;
+    float: right;
+}
+.goran{
+    background-color: #9C64A6;
+    color: white;
+    height: 150px;
+    letter-spacing: 5px;
+}
+.doln{
+    color: indigo;
+    height: 580px;
+}
+footer{
+    background-color: #9C64A6;
+    color: white;
+    padding: 10px;
+    clear: both;
+}
+h2{
+    text-align: center;
+}
+ul{
+    list-style-type:circle;
+}
+img{
+    padding: 4px;
+    margin: 15px;
+}
+img:hover{
+    padding: 3px;
+    border: dashed 1px indigo;
+
+}
+#glowna{
+    padding: 25px;
+}

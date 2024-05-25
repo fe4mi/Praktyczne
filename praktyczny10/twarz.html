@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon kosmetyczny</title>
+    <link rel="stylesheet" href="styl7.css">
+</head>
+<body>
+    <aside>
+        <section class="goraa">
+            <h2>Nasza oferta</h2>
+            <ol>
+                <li><a href="twarz.html">Oczyszczanie twarzy</a>
+                    <ul>
+                        <li>Peeling</li>
+                        <li>Maska</li>
+                    </ul>
+                </li>
+                <li>Masaż</li>
+                <li>Makijaż</li>
+            </ol>
+            <a href="index.html" id="glowna">Strona główna</a>
+        </section>
+        <section class="dola">
+            <img src="./obraz1.jpg" alt="Personel">
+        </section>
+    </aside>
+    <nav>
+        <section class="goran">
+            <h1>Usługi kosmetyczne</h1>
+        </section>
+        <section class="doln">
+            <h3>Kalkulator ceny wizyty</h3>
+            <input type="checkbox" name="check" id="peeling">Peeling<br />
+            <input type="checkbox" name="check" id="maska">Maska<br />
+            <input type="checkbox" name="check" id="masaz">Masaż twarzy<br />
+            <input type="checkbox" name="check" id="makijaz">Makijaż<br />
+            <button onclick="zabiegi()">Oblicz cenę</button>
+            <p id="wynik"></p>
+        </section>
+    </nav>
+    <footer>
+        <p>Autor:xxxxxxxxxxxx</p>
+    </footer>
+
+    <script>
+        function zabiegi(){
+        var peeling = document.getElementById("peeling");
+        var maska = document.getElementById("maska");
+        var masaz = document.getElementById("masaz");
+        var makijaz = document.getElementById("makijaz");
+
+        if(peeling.checked){
+            peeling = 45;
+        }else{
+            peeling = 0;
+        }
+        if(maska.checked){
+            maska=30;
+        }else{
+            maska = 0;
+        }
+        if(masaz.checked){
+            masaz=20;
+        }else{
+            masaz = 0;
+        }
+        if(makijaz.checked){
+            makijaz=50;
+        }else{
+            makijaz = 0;
+        }
+       
+var suma = maska+masaz+makijaz+peeling;
+
+        document.getElementById("wynik").innerHTML= "Cena zabiegów: " + suma;}
+    </script>
+</body>
+</html>
