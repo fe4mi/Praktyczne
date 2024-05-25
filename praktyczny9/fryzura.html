@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fryzierstwo</title>
+    <link rel="stylesheet" href="styl8.css">
+</head>
+<body>
+    <header>
+        <section id="lewyp">
+               <a href="index.html"><h1>SALON FRYZIERSKI</h1></a> 
+        </section>
+        <section id="lewyd">
+                <h2>PROMOCJA!</h2>
+                <br />
+                <input type="radio" name="radio" id="one">
+                Krótkie<br />
+                <input type="radio" name="radio" id="two">
+                Średnie<br />
+                <input type="radio" name="radio" id="three">
+                Półdługie<br />
+                <input type="radio" name="radio" id="four">
+                Długie<br />
+                <button onclick="cena()">Odkryj Promocję</button>
+                <p id="wynik"></p>
+        </section>
+        <section id="lewyt">
+                <p>Witaj! Miło nam, że odwiedziłeś nasz salon. Sprawdź promocje!</p>
+                <h4>Kontakt: 444 555 666</h4>
+        </section>
+    </header>
+    <aside>
+        <section id="prawyp">
+                <a href="./fryzura.html"><h4>Ceny strzyżenia</h4></a>
+                <table>
+                    <tr>
+                        <th>Długość włosów</th>
+                        <th>Cena</th>
+                    </tr>
+                    <tr>
+                        <td>Krótkie</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>Średnie</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>Półdługie</td>
+                        <td>40</td>
+                    </tr>
+                    <tr>
+                        <td>Długie</td>
+                        <td>50</td>
+                    </tr>
+                </table>
+        </section>
+        <section id="prawyd">
+            <img src="./obraz1.jpg" alt="Fryzjerka">
+        </section>
+    </aside>
+    <footer>
+            <p>Autor:xxxxxxxxxxxxx</p>
+    </footer>
+
+
+    <script>
+        function cena(){
+            var one =  document.getElementById("one");
+            var two = document.getElementById("two");
+            var three = document.getElementById("three");
+            var four = document.getElementById("four");
+
+            if(one.checked){
+                document.getElementById("wynik").innerHTML="cena promocyjna: "+ 15;
+            }else if(two.checked){
+                document.getElementById("wynik").innerHTML="cena promocyjna: "+ 20;
+            }
+            else if(three.checked){
+                document.getElementById("wynik").innerHTML="cena promocyjna: "+ 30;
+            }
+            else if(four.checked){
+                document.getElementById("wynik").innerHTML="cena promocyjna: "+ 40;
+            }
+            
+        }
+    </script>
+</body>
+</html>
